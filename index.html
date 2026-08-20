@@ -295,6 +295,7 @@
   .upsell{display:flex;gap:14px;align-items:flex-start;border:1px solid rgb(var(--vv-border));padding:16px;background:rgb(var(--vv-paper));}
   .upsell__media{flex:0 0 auto;width:64px;height:64px;background:rgb(var(--vv-cognac-tint));position:relative;}
   .upsell__media .ph{width:26px;height:26px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.35;}
+  .upsell__media .shot{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
   .upsell__check{flex:0 0 auto;width:44px;height:44px;display:flex;align-items:center;justify-content:center;margin:0 -10px;}
   .upsell__check input{position:absolute;opacity:0;width:44px;height:44px;margin:0;cursor:pointer;}
   .upsell__box{width:20px;height:20px;border:1px solid rgb(var(--vv-ink));display:flex;align-items:center;justify-content:center;background:rgb(var(--vv-white));}
@@ -368,6 +369,7 @@
   .bcard__media img.shot{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
   .bcard__stack{position:absolute;left:8px;bottom:8px;z-index:3;width:46px;height:46px;background:rgb(var(--vv-white));border:2px solid rgb(var(--vv-white));box-shadow:0 1px 4px rgba(0,0,0,.18);overflow:hidden;}
   .bcard__stack .ph{width:20px;height:20px;}
+  .bcard__stack .shot{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
   .bcard__plus{position:absolute;left:56px;bottom:22px;z-index:4;width:16px;height:16px;background:rgb(var(--vv-ink));color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;line-height:1;}
   .bcard .badge--bundle{background:rgb(var(--vv-cognac));color:#fff;left:auto;right:10px;}
   .bcard .add{aria-label:inherit;}
@@ -852,7 +854,7 @@
               <div class="pdp__block">
                 <div class="rtoggle" style="margin-bottom:12px;"><span class="dot"></span><span class="mech">Widget</span><span class="sep">·</span><span class="src">Upsell Offer → Curated pairing</span></div>
                 <div class="upsell">
-                  <div class="upsell__media"><img class="ph" src="assets/icons/icon-shoe.svg" alt=""></div>
+                  <div class="upsell__media"><img class="shot" src="https://cdn.shopify.com/s/files/1/0940/4825/6338/files/9999064-01-001_S_1_D.jpg?v=1782829076" alt="Ultimate kit"></div>
                   <label class="upsell__check">
                     <input type="checkbox" checked aria-describedby="up-desc-1">
                     <span class="upsell__box" aria-hidden="true"></span>
@@ -885,7 +887,7 @@
               <div class="pdp__block" style="margin-bottom:0;">
                 <div class="rtoggle" style="margin-bottom:12px;"><span class="dot"></span><span class="mech">Widget</span><span class="sep">·</span><span class="src">Curated pairing</span></div>
                 <div class="upsell" style="flex-wrap:wrap;">
-                  <div class="upsell__media"><img class="ph" src="assets/icons/icon-shoe.svg" alt=""></div>
+                  <div class="upsell__media"><img class="shot" src="https://cdn.shopify.com/s/files/1/0940/4825/6338/files/9999064-01-001_S_1_D.jpg?v=1782829076" alt="Ultimate kit"></div>
                   <label class="upsell__check">
                     <input type="checkbox" checked aria-describedby="up-desc-2">
                     <span class="upsell__box" aria-hidden="true"></span>
@@ -915,7 +917,7 @@
         <div class="frame__pad">
           <div class="rtoggle" style="margin-bottom:12px;border-color:rgb(var(--vv-cognac-dark));"><span class="dot"></span><span class="mech">Widget</span><span class="sep">·</span><span class="src">Curated pairing <em>leeg</em> → <strong>Similar Products (fallback actief)</strong></span></div>
           <div class="upsell">
-            <div class="upsell__media"><img class="ph" src="assets/icons/icon-shoe.svg" alt=""></div>
+            <div class="upsell__media"><img class="shot" src="https://cdn.shopify.com/s/files/1/0940/4825/6338/files/9999062-1-001_S_1_D.jpg?v=1787138266" alt="Premium Repellent Spray"></div>
             <label class="upsell__check"><input type="checkbox" aria-describedby="up-desc-3"><span class="upsell__box" aria-hidden="true"></span></label>
             <div class="upsell__body"><p class="upsell__title">Voeg schoenspray toe</p><p class="upsell__desc" id="up-desc-3">Impregneert leer en textiel.</p></div>
             <div class="upsell__price"><span class="was">€ 24,95</span><span class="now">€ 19,95</span></div>
@@ -949,6 +951,7 @@
       <ul>
         <li>Struck-through prijs gebruikt dezelfde <code>.price .was</code> / <code>.now</code> tokens als de productkaart (grijs doorgestreept + cognac huidige prijs) — geen nieuwe kleurpaar nodig.</li>
         <li>Voeg <code>aria-live="polite"</code> toe aan het totaalbedrag in de add-to-cart-knop, zodat screenreaders de prijsupdate horen wanneer de checkbox wordt uit-/aangevinkt.</li>
+        <li><strong>Update 20-08-2026:</strong> productfoto's zijn nu echte live Shopify-CDN-afbeeldingen (via de Shopify-connector opgehaald), geen icoon-placeholders meer: "Voeg onderhoudsset toe"/"Onderhoudsset" tonen het echte <em>Ultimate kit</em>-product (<code>9999064-01-001</code>); de Fallback-staat ("Voeg schoenspray toe") toont de echte <em>Premium Repellent Spray</em> (<code>9999062-1-001</code>).</li>
       </ul>
     </div>
   </section>
@@ -1195,7 +1198,7 @@
               <div class="bcard__media">
                 <img class="shot" src="https://www.viavaishoes.com/cdn/shop/files/62374-01-1384_S_1_D.jpg?width=533" alt="June Loua" loading="lazy">
                 <span class="badge badge--bundle">Bundel</span>
-                <div class="bcard__stack"><img class="ph" src="assets/icons/icon-shoe.svg" alt=""></div>
+                <div class="bcard__stack"><img class="shot" src="https://cdn.shopify.com/s/files/1/0940/4825/6338/files/9999064-01-001_S_1_D.jpg?v=1782829076" alt="Ultimate kit"></div>
                 <span class="bcard__plus" aria-hidden="true">+</span>
                 <div class="sizes"><span>38</span><span>39</span><span>40</span></div>
                 <button class="add" aria-label="Bundel June Loua + onderhoudsset toevoegen aan winkelwagen"><img src="assets/icons/icon-plus.svg" alt=""></button>
@@ -1210,13 +1213,13 @@
               <div class="bcard__media">
                 <img class="shot" src="https://www.viavaishoes.com/cdn/shop/files/62492-01-1384_S_1_D.jpg?width=533" alt="Elisa Palmer" loading="lazy">
                 <span class="badge badge--bundle">Bundel</span>
-                <div class="bcard__stack"><img class="ph" src="assets/icons/icon-shoe.svg" alt=""></div>
+                <div class="bcard__stack"><img class="shot" src="https://cdn.shopify.com/s/files/1/0940/4825/6338/files/8888113-01-316_S_1_D.jpg?v=1786623477" alt="Veters"></div>
                 <span class="bcard__plus" aria-hidden="true">+</span>
                 <div class="sizes"><span>36</span><span>37</span><span>38</span></div>
-                <button class="add" aria-label="Bundel Elisa Palmer + inlegzolen toevoegen aan winkelwagen"><img src="assets/icons/icon-plus.svg" alt=""></button>
+                <button class="add" aria-label="Bundel Elisa Palmer + veters toevoegen aan winkelwagen"><img src="assets/icons/icon-plus.svg" alt=""></button>
               </div>
               <div class="bcard__information">
-                <span class="bcard__heading">Elisa Palmer + inlegzolen</span>
+                <span class="bcard__heading">Elisa Palmer + veters</span>
                 <span class="price"><span class="was">€ 234,90</span><span class="now">€ 209,95</span></span>
               </div>
               <span class="bcard__save">Bespaar € 24,95</span>
@@ -1225,7 +1228,7 @@
               <div class="bcard__media">
                 <img class="shot" src="https://www.viavaishoes.com/cdn/shop/files/62495-01-212_S_1_D.jpg?width=533" alt="June Rhea" loading="lazy">
                 <span class="badge badge--bundle">Bundel</span>
-                <div class="bcard__stack"><img class="ph" src="assets/icons/icon-shoe.svg" alt=""></div>
+                <div class="bcard__stack"><img class="shot" src="https://cdn.shopify.com/s/files/1/0940/4825/6338/files/6666006-01-900_S_1_D.jpg?v=1787219551" alt="Dustbag"></div>
                 <span class="bcard__plus" aria-hidden="true">+</span>
                 <div class="sizes"><span>37</span><span>38</span><span>39</span></div>
                 <button class="add" aria-label="Bundel June Rhea + schoenzak toevoegen aan winkelwagen"><img src="assets/icons/icon-plus.svg" alt=""></button>
@@ -1240,7 +1243,7 @@
               <div class="bcard__media">
                 <img class="shot" src="https://www.viavaishoes.com/cdn/shop/files/62383-02-316_S_1_D.jpg?width=533" alt="June Haylee" loading="lazy">
                 <span class="badge badge--bundle">Bundel</span>
-                <div class="bcard__stack"><img class="ph" src="assets/icons/icon-shoe.svg" alt=""></div>
+                <div class="bcard__stack"><img class="shot" src="https://cdn.shopify.com/s/files/1/0940/4825/6338/files/8888333-01-212_S_1_D.jpg?v=1786023351" alt="Nova Mabel sokken"></div>
                 <span class="bcard__plus" aria-hidden="true">+</span>
                 <div class="sizes"><span>38</span><span>39</span><span>40</span></div>
                 <button class="add" aria-label="Bundel June Haylee + sokken toevoegen aan winkelwagen"><img src="assets/icons/icon-plus.svg" alt=""></button>
@@ -1264,7 +1267,7 @@
               <div class="bcard__media">
                 <img class="shot" src="https://www.viavaishoes.com/cdn/shop/files/62374-01-1384_S_1_D.jpg?width=533" alt="June Loua" loading="lazy">
                 <span class="badge badge--bundle">Bundel</span>
-                <div class="bcard__stack"><img class="ph" src="assets/icons/icon-shoe.svg" alt=""></div>
+                <div class="bcard__stack"><img class="shot" src="https://cdn.shopify.com/s/files/1/0940/4825/6338/files/9999064-01-001_S_1_D.jpg?v=1782829076" alt="Ultimate kit"></div>
                 <span class="bcard__plus" aria-hidden="true">+</span>
                 <div class="sizes"><span>38</span><span>39</span></div>
                 <button class="add" aria-label="Bundel June Loua + onderhoudsset toevoegen aan winkelwagen"><img src="assets/icons/icon-plus.svg" alt=""></button>
@@ -1279,13 +1282,13 @@
               <div class="bcard__media">
                 <img class="shot" src="https://www.viavaishoes.com/cdn/shop/files/62492-01-1384_S_1_D.jpg?width=533" alt="Elisa Palmer" loading="lazy">
                 <span class="badge badge--bundle">Bundel</span>
-                <div class="bcard__stack"><img class="ph" src="assets/icons/icon-shoe.svg" alt=""></div>
+                <div class="bcard__stack"><img class="shot" src="https://cdn.shopify.com/s/files/1/0940/4825/6338/files/8888113-01-316_S_1_D.jpg?v=1786623477" alt="Veters"></div>
                 <span class="bcard__plus" aria-hidden="true">+</span>
                 <div class="sizes"><span>37</span><span>38</span></div>
-                <button class="add" aria-label="Bundel Elisa Palmer + inlegzolen toevoegen aan winkelwagen"><img src="assets/icons/icon-plus.svg" alt=""></button>
+                <button class="add" aria-label="Bundel Elisa Palmer + veters toevoegen aan winkelwagen"><img src="assets/icons/icon-plus.svg" alt=""></button>
               </div>
               <div class="bcard__information">
-                <span class="bcard__heading">Elisa Palmer + zolen</span>
+                <span class="bcard__heading">Elisa Palmer + veters</span>
                 <span class="price"><span class="was">€ 234,90</span><span class="now">€ 209,95</span></span>
               </div>
               <span class="bcard__save">Bespaar € 24,95</span>
@@ -1306,7 +1309,7 @@
               <div class="bcard__media">
                 <img class="shot" src="https://www.viavaishoes.com/cdn/shop/files/62495-01-212_S_1_D.jpg?width=533" alt="June Rhea" loading="lazy">
                 <span class="badge badge--bundle">Bundel</span>
-                <div class="bcard__stack"><img class="ph" src="assets/icons/icon-shoe.svg" alt=""></div>
+                <div class="bcard__stack"><img class="shot" src="https://cdn.shopify.com/s/files/1/0940/4825/6338/files/8888333-01-212_S_1_D.jpg?v=1786023351" alt="Nova Mabel sokken"></div>
                 <span class="bcard__plus" aria-hidden="true">+</span>
                 <div class="sizes"><span>38</span><span>39</span><span>40</span></div>
                 <button class="add" aria-label="Bundel toevoegen aan winkelwagen"><img src="assets/icons/icon-plus.svg" alt=""></button>
@@ -1376,6 +1379,7 @@
         <li><code>.badge--bundle</code> hergebruikt de bestaande <code>.badge</code>-pil-component (cognac achtergrond, 40px radius) — geen nieuw badge-type nodig.</li>
         <li><code>+</code>-knop rechtsonder voegt in één klik de <em>volledige bundel</em> toe (hoofdproduct + accessoire), niet alleen het hoofdproduct — pas <code>aria-label</code> hierop aan zoals getoond.</li>
         <li>Bij toegevoegde maatafhankelijkheid: de <code>.sizes</code>-strip selecteert alleen de maat van het hoofdproduct; het accessoire-item heeft doorgaans geen maat en wordt automatisch meegevoegd.</li>
+        <li><strong>Update 20-08-2026:</strong> <code>.bcard__stack</code>-thumbnails tonen nu echte live Shopify-CDN-productfoto's (via de Shopify-connector), geen icoon-placeholder meer — <em>Ultimate kit</em> (<code>9999064-01-001</code>) voor onderhoudsset-bundels, <em>Veters</em> (<code>8888113-01-316</code>), <em>Dustbag</em> (<code>6666006-01-900</code>) voor "schoenzak", en <em>Nova Mabel sokken</em> (<code>8888333-01-212</code>). "Inlegzolen" bleek geen bestaand VIA VAI-product — die voorbeelden zijn vervangen door Veters (tekst + afbeelding beide bijgewerkt, zie "Elisa Palmer + veters").</li>
       </ul>
     </div>
   </section>
