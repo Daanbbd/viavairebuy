@@ -1,0 +1,102 @@
+:root {
+  --vv-cognac: 177, 106, 58;
+  --vv-cognac-dark: 143, 85, 48;
+  --vv-cognac-tint: 240, 227, 217;
+  --vv-ink: 43, 43, 43;
+  --vv-black: 18, 18, 18;
+  --vv-true-black: 0, 0, 0;
+  --vv-grey: 145, 145, 145;
+  --vv-border: 221, 221, 221;
+  --vv-white: 255, 255, 255;
+  --vv-paper: 246, 246, 246;
+  --vv-sand: 231, 209, 194;
+  --vv-night: 36, 40, 51;
+
+  --color-background: var(--vv-white);
+  --color-foreground: var(--vv-ink);
+  --color-foreground-light: var(--vv-grey);
+  --color-button: var(--vv-cognac);
+  --color-button-hover: var(--vv-black);
+  --color-button-label: var(--vv-white);
+  --color-secondary-button-label: var(--vv-true-black);
+  --color-border: var(--vv-border);
+  --color-shadow: var(--vv-true-black);
+
+  --color-success: 63, 122, 82;
+  --color-error: 156, 59, 46;
+  --color-sale: var(--vv-cognac);
+
+  --alpha-button-background: 1;
+  --alpha-button-border: 1;
+  --alpha-link: 0.85;
+  --alpha-badge-background: 1;
+  --alpha-badge-border: 0.1;
+  --alpha-input-border: 0.55;
+
+  --font-body-family: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --font-heading-family: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --font-accent-family: cursive;
+
+  --font-weight--book: 400;
+  --font-weight--regular: 450;
+  --font-weight--semibold: 600;
+  --font-weight--bold: 700;
+
+  --fs-display: 56px;
+  --fs-h1: 40px;
+  --fs-h2: 28px;
+  --fs-h3: 20px;
+  --fs-h4: 16px;
+  --fs-body: 16px;
+  --fs-small: 14px;
+  --fs-caption: 12px;
+  --fs-micro: 10px;
+
+  --lh-tight: 1.1;
+  --lh-heading: 1.2;
+  --lh-body: 1.6;
+
+  --ls-caption: 0.13rem;
+  --ls-caption-lg: 0.18rem;
+  --ls-button: 0.04em;
+  --ls-heading: 0.01em;
+
+  --spacing: 20px;
+  --page-width: 1400px;
+  --gutter: 8px;
+
+  --buttons-radius: 0px;
+  --inputs-radius: 0px;
+  --product-card-corner-radius: 0px;
+  --collection-card-corner-radius: 0px;
+  --blog-card-corner-radius: 0px;
+  --media-radius: 0px;
+  --popup-corner-radius: 0px;
+  --text-boxes-radius: 0px;
+  --variant-pills-radius: 40px;
+  --badge-corner-radius: 40px;
+
+  --border-hairline: 1px solid rgb(var(--color-border));
+  --shadow-none: none;
+  --shadow-popup: 0 4px 5px rgba(var(--color-shadow), 0.05);
+
+  --ease: ease-in-out;
+  --dur-fast: 0.2s;
+  --dur: 0.3s;
+  --dur-slow: 0.5s;
+}
+body {
+  font-family: var(--font-body-family);
+  font-weight: var(--font-weight--book);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: rgb(var(--color-foreground));
+  background: rgb(var(--color-background));
+}
+h1,.h1,h2,.h2,h3,.h3,h4,.h4{font-family:var(--font-heading-family);font-weight:var(--font-weight--semibold);line-height:var(--lh-heading);letter-spacing:var(--ls-heading);margin:0;}
+h1,.h1{font-size:var(--fs-h1);}
+h2,.h2{font-size:var(--fs-h2);}
+h3,.h3{font-size:var(--fs-h3);}
+h4,.h4{font-size:var(--fs-h4);}
+p{margin:0 0 1em;}
+a{color:inherit;}
